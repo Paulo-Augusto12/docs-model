@@ -1,0 +1,10 @@
+Table users {
+  id bigint [pk]
+  name varchar
+}
+
+Table carteira {
+  id bigint [pk]
+  user_id bigint [ref: > users.id]
+  saldo decimal
+}
