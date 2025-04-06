@@ -1,20 +1,34 @@
+  
+
 # 🧾 Nome da Tela/Função
 
 > _Exemplo: Cadastro de Agendamentos_
 
+  
+
 ---
+
+  
 
 ## 📌 Descrição Geral
 
 Breve descrição da funcionalidade e seu propósito no sistema.
 
+  
+
 > Exemplo:
 
 > Tela que permite o agendamento de serviços por parte do administrador, com vínculo a clientes e horários disponíveis.
 
+  
+
 ---
 
+  
+
 ## ⚙️ Regra de Negócio
+
+  
 
 - [ ] Quais campos são obrigatórios?
 
@@ -24,6 +38,8 @@ Breve descrição da funcionalidade e seu propósito no sistema.
 
 - [ ] Regras de permissão (quem pode acessar/editar)?
 
+  
+
 > Exemplo:
 
 > - Apenas administradores podem acessar essa tela.
@@ -32,11 +48,19 @@ Breve descrição da funcionalidade e seu propósito no sistema.
 
 > - O horário só pode ser agendado se estiver livre.
 
+  
+
 ---
+
+  
 
 ## 🗂️ Estrutura do Banco de Dados
 
+  
+
 ### 🔁 Tabelas Envolvidas
+
+  
 
 ```text
 
@@ -48,37 +72,20 @@ Breve descrição da funcionalidade e seu propósito no sistema.
 
 ```
 
-### 🆕 Nova Tabela: appointments
+  
 
-| Campo | Tipo | Descrição |
+### 🆕 Novas Tabelas (DBML)
 
-|-------------|-----------|-----------------------------------------|
+  
 
-| id | bigint | Chave primária |
-
-| user_id | bigint | Chave estrangeira para `users` |
-
-| service_id | bigint | Chave estrangeira para `services` |
-
-| date | date | Data do agendamento |
-
-| time | time | Horário do agendamento |
-
-| status | string | Status do agendamento (pending, done) |
-
-| created_at | timestamp | Registro de criação |
-
-| updated_at | timestamp | Registro de atualização |
-
-> Observações:
-
-> - FK (user_id) → users(id)
-
-> - FK (service_id) → services(id)
-
----
-
+```dbml
+Insira aqui o dbml
+```
+  
+📎 [Visualizar no dbdiagram.io](https://dbdiagram.io/) *(link deve ser atualizado com seu próprio modelo)*
 ## 🌐 Rotas/API
+
+  
 
 | Método | Rota | Descrição | Permissão |
 
@@ -92,17 +99,29 @@ Breve descrição da funcionalidade e seu propósito no sistema.
 
 | DELETE | /api/appointments/{id} | Remove agendamento | admin |
 
+  
+
 ---
+
+  
 
 ## 🖼️ Layout da Tela
 
+  
+
 ### Wireframe / Mock
+
+  
 
 - [ ] Inserir imagem ou link do Figma
 
 - [ ] Indicar campos e ações
 
+  
+
 ### Componentes
+
+  
 
 - Campo de seleção de cliente
 
@@ -114,9 +133,15 @@ Breve descrição da funcionalidade e seu propósito no sistema.
 
 - Tabela com listagem de agendamentos
 
+  
+
 ---
 
+  
+
 ## ✅ Checklist de Implementação
+
+  
 
 - [ ] Criar migration da nova tabela
 
@@ -130,8 +155,14 @@ Breve descrição da funcionalidade e seu propósito no sistema.
 
 - [ ] Testes manuais
 
+  
+
 ---
 
+  
+
 ## 🗒️ Observações Adicionais
+
+  
 
 > Exemplo: O campo `status` será sempre “pending” ao criar, e atualizado manualmente depois do serviço concluído.
