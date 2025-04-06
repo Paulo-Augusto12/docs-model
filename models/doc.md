@@ -85,21 +85,9 @@ Insira aqui o dbml
 📎 [Visualizar no dbdiagram.io](https://dbdiagram.io/) *(link deve ser atualizado com seu próprio modelo)*
 ## 🌐 Rotas/API
 
-  
-
-| Método | Rota | Descrição | Permissão |
-
-|--------|-------------------------|---------------------------|------------|
-
-| GET | /api/appointments | Lista agendamentos | admin/user |
-
-| POST | /api/appointments | Cria novo agendamento | admin |
-
-| PUT | /api/appointments/{id} | Atualiza agendamento | admin |
-
-| DELETE | /api/appointments/{id} | Remove agendamento | admin |
-
-  
+#### 📥 `GET /endpoint`
+- **Descrição**: Descrição da rota  
+- **Permissão**: `permissões/middlewares da rota`
 
 ---
 
